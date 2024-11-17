@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<helloWorld xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="sequence_minOccurs_maxOccurs.xsd">
+	<hello></hello>
+	<world></world>
+	
+	<hello></hello>
+	<world></world>
+</helloWorld>	

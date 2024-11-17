@@ -1,0 +1,13 @@
+<?xml version="1.0"  encoding="UTF-8" standalone="yes" ?>
+<!--
+  如何定义和使用实体
+  xml文档实体的定义
+-->
+<!DOCTYPE company[
+ <!ENTITY lihongkun "李红昆">
+ <!ENTITY address "藁城">
+]>
+<company>
+    <name> &lihongkun;</name>
+	<address>&address;</address>
+</company>

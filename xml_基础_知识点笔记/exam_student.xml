@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Exam>
+	<Student name="lujy">
+		<Cpp>90</Cpp>
+		<CoreJava>100</CoreJava>
+		<JavaWeb>98</JavaWeb>
+		<EJB>95</EJB>
+	</Student>
+	<Student name="dush">
+		<Cpp>99</Cpp>
+		<CoreJava>100</CoreJava>
+		<JavaWeb>80</JavaWeb>
+		<EJB>60</EJB>
+	</Student>
+	<Student name="liqf">
+		<Cpp>100</Cpp>
+		<CoreJava>90</CoreJava>
+		<JavaWeb>75</JavaWeb>
+		<EJB>60</EJB>
+	</Student>
+	<Student name="zhuxy">
+		<Cpp>100</Cpp>
+		<CoreJava>100</CoreJava>
+		<JavaWeb>100</JavaWeb>
+		<EJB>100</EJB>
+	</Student>
+</Exam>

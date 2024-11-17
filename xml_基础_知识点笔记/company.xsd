@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="联系人列表">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="联系人" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="联系人" >
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="姓名"/>
+				<xs:element ref="公司"/>
+				<xs:element ref="电话"/>
+				<xs:element ref="地址"/>
+			</xs:sequence>		
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="公司" type="xs:string" />
+	<xs:element name="邮编" type="xs:int" />
+	<xs:element name="地址">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="街道"/>
+				<xs:element ref="城市"/>
+				<xs:element ref="省份"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="城市">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				 <xs:enumeration value="上海"/>
+				 <xs:enumeration value="北京市"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	
+	<xs:element name="姓名" type="xs:string"/>
+	<xs:element name="电话" type="xs:string" />
+	<xs:element name="省份">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="上海" />
+				<xs:enumeration value="北京" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	
+	<xs:element name="街道" type="xs:string" />
+</xs:schema>

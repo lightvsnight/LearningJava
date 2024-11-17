@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="mysimpleType_List_String">
+		<!--
+		   list 类似于java中的list，是一个数组，该list在schema中定义为integer类型数组；
+			所以内容只能为[1,2,3],不能出现字符串
+		 -->
+		<xs:list itemType="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="mysimpleType_List_integer">
+		<xs:list itemType="xs:integer"/>
+	</xs:simpleType>
+	<xs:simpleType name="mysimpleType_List_date">
+		<xs:list itemType="xs:date"/>
+	</xs:simpleType>
+	<xs:element name="List">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="StringList" type="mysimpleType_List_String"/>
+				<xs:element name="IntegerList" type="mysimpleType_List_integer"/>
+				<xs:element name="DateList" type="mysimpleType_List_date"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

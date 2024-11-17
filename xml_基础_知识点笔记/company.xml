@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<联系人列表 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="company.xsd">
+	<联系人>
+		<姓名></姓名>
+		<公司></公司>
+		<电话></电话>
+		<地址>
+			<街道></街道>
+			<城市>上海</城市>
+			<省份>上海</省份>
+		</地址>
+	</联系人>
+</联系人列表>

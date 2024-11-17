@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="cat" type="xs:string"/>
+	<xs:element name="dog" type="xs:string"/>
+	<!--复杂类型：自定义的类型-->
+	<xs:complexType name="myType">
+		<xs:sequence>
+			<xs:element ref="cat"/>
+			<xs:element ref="dog"/>
+		</xs:sequence>
+		<!--
+			minOccurs 最小出现次数
+			maxOccurs 最大出现次数
+		-->
+	</xs:complexType>
+	<!-- pets:我定义一个自定义的宠物元素类型，宠物包含 cat,dog -->
+	<xs:element name="pets" type="myType"/>
+</xs:schema>

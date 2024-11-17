@@ -1,0 +1,2 @@
+
+-XX:MetaspaceSize=32m -XX:MaxMetaspaceSize=32m -Xms128m -Xmx128m -Xmn64m -Xss128k -XX:SurvivorRatio=8 -XX:+UseConcMarkSweepGC

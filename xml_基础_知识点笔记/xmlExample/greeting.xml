@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<!-- 
+  xml-stylesheet 样式单  
+  text/css css样式
+  text/xsl 声明
+-->
+<?xml-stylesheet type="text/css" href="hello.css" ?>
+<greeting>
+  Hello World
+</greeting>

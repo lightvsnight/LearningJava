@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE poem [
+<!--
+   实体语法：ENTITY 实体名称 "字符"
+-->
+<!ENTITY comma ",">
+<!ENTITY stop "。">
+<!-- 
+   +:匹配多次，但至少得有出现一次[示例：author+ ]
+   * :匹配多次，可出现0次或多次[示例：title*]
+   |: 必须有一个出现[示例：(description|content)]
+   ? :匹配0次或1次[示例：date?]
+
+  元素语法：
+
+  元素类型：(#PCDATA)
+-->
+<!ELEMENT poem (author+,title*,(description|content),date?)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT content (#PCDATA)>
+
+<!--
+  属性语法： ATTLIST  元素名称 属性名称 类型 属性特点
+
+  属性类型：CDATA  普通的字符串
+			ID      表明该属性的取值必须是惟一的
+			IDREF/IDREFS
+				属性的值指向文档中其它地方声明的ID类型的值
+				IDREFS同IDREF,但是可以具有有空格分开的多个引用
+			NMTOKEN/NMTOKENS 
+				是CDATA的一个子集，表示属性必须是：
+					英文字母、数字、句号、破折号、下划线或冒号，属性值不能含有空格
+				NMTOKENS与NMTOKEN 类似，包含多个由空格分隔的字符
+			Enumerated
+			ENTITY/ENTITIES
+			NOTATION
+			NOTATIONS
+
+  属性特点：必须大写
+			#REQUIRED :必须出现
+				 示例语法：ATTLIST 元素名称 属性名称 类型 #REQUIRED
+			#IMPLIED : 可有可无
+				 示例语法：ATTLIST 元素名称 属性名称 类型 #IMPLIED
+			#FIXED value  属性的值必须为指定的固定值
+				 示例语法：ATTLIST 元素名称 属性名称 类型 #FIXED "value"
+			#Default value
+			     示例语法：ATTLIST 元素名称 属性名称 类型 "value"
+-->
+<!--
+ #PCDATA 和 CDATA 区别：CDATA 用于定义属性的，而#PCDATA 用于定义元素的
+-->
+<!ATTLIST title name CDATA #REQUIRED>
+]>
+<fglaskdjf></fglaskdjf>
+<poem>
+	<author>王维</author>
+    <author>王维</author>
+	<title name="luchai">鹿柴</title>
+	<content>
+		空山不见人&comma;但闻人语声&stop;
+		返景入深林&comma;复照青苔上&stop;
+	</content>
+	
+</poem>

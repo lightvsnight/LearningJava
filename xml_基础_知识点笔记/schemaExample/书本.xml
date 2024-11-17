@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<书本 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="M:\JAVA学习视频\xml_基础_知识点笔记\schemaExample\书本.xsd">
+	<名称>书剑恩仇录</名称>
+	<作者>金庸</作者>
+	<时间>2015-01-01</时间>
+	<页码>1</页码>
+</书本>

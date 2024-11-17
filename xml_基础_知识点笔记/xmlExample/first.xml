@@ -1,0 +1,22 @@
+<!--standalone="yes" 表明该文件是独立的，单独存在的；不需要DTD文档来声明-->
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<students>
+
+    <!--
+	   属性=值
+	   gender="male"  性别="male:男性的;female:女性的"
+	   isHandsome="true"  帅吗= true:帅;false:不帅
+	-->
+	<student gender="male" isHandsome="true">
+		<id>100</id>
+		<name>xiali</name>
+		<address>earth</address>
+		<score>50</score>
+	</student>
+	<student gender="female">
+	   <id>200</id>
+	   <name>zhangsan</name>
+	   <address>earth</address>
+	   <score>80</score>
+	</student>
+</students>

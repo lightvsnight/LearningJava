@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>	
+<person xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="group.xsd">
+    <name>
+       xml
+    </name>
+	<birthday>
+		2016-06-21
+	</birthday>
+	<age>1</age>
+</person>

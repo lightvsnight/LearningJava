@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<List xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="simpleType_list.xsd">
+
+<!--
+   list 类似于java中的list，是一个数组，该list在schema中定义为integer类型数组；
+	所以内容只能为[1,2,3],不能出现字符串
+ -->
+ <StringList>1 2 3 4</StringList>
+ <IntegerList>1 2 3 4 5</IntegerList>
+ <DateList>2016-01-01 2016-02-02 2016-03-03 2016-04-04</DateList>
+</List>

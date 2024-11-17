@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:element name="world" type="xs:string"/>
+	<xs:complexType name="myType">
+	
+		<!--
+			choice 中的 minOccurs 和 maxOccurs
+			minOccurs：最少出现次数
+			maxOccurs：最多出现次数
+			指的是每一个元素出现的最少次数，和最多次数
+		-->
+		<xs:choice minOccurs="1" maxOccurs="1">
+			<xs:element name="hello" type="xs:string"/>
+			<xs:element ref="world"/>
+		</xs:choice>
+	</xs:complexType>
+	
+	<xs:element name="helloWorld" type="myType"/>
+</xs:schema>
+
+
+
