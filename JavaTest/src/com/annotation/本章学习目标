@@ -1,0 +1,18 @@
+
+
+java Annotation(java注解)
+
+     掌握Java Annotation 特性与使用方式
+      
+       1). Annotation 的由来
+       2). Annotation 的定义方式
+       3). Annotation 的使用方式
+       4). jdk5 内建的 Annotation
+       5). Annotation 的高级特性
+        
+        
+      Annotation 的工作方式：
+          annotation 并不直接影响代码语义，但是它能够工作的方式被看作类似程序的工具或者类库，
+                  它会反过来对 正在运行的程序语义 有所影响。
+          annotation 可以从源文件、class文件或者以 在运行时反射的多种方式  被读取。
+          

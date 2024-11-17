@@ -1,0 +1,34 @@
+
+ 
+  限定Annotation使用对象 @Target
+      
+      -- 使用 java.lang.annotaion.Target 可以定义其使用的时机
+    	  在定义时要指定 java.lang.annotaion.ElementType 的枚举值之一
+    		  
+      
+    package java.lang.annotation.ElementType
+    
+    public enum ElementType{
+        
+        TYPE, // 适用于class，interface，enum (类，接口，枚举)
+        FIELD, // field 适用于变量
+        METHOD, //method  适用于成员方法  
+        PARAMETER, // method 之上 parameter 适用于方法上的参数
+        CONSTRUCTOR, // constructor 适用于构造方法
+        LOCAL_VARIABLE,  // 使用于局部变量
+        ANNOTATION_TYPE, // 适用于annotation型态
+        PACKAGE  //使用 package 
+    } 
+      
+
+
+
+
+
+
+
+
+
+
+
+

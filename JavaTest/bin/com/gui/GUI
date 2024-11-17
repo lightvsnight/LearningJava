@@ -1,0 +1,6 @@
+
+GUI (Graphical User interface) 用户图形界面
+
+   -- AWT (Abstract Window Toolkit) 抽象窗口工具集，第一代的Java GUI 组件，是重量级。
+   
+   -- Swing  不依赖底层细节，轻量级别的组件。

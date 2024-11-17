@@ -1,0 +1,53 @@
+java 的 反射机制
+
+     反射机制提供了如下几种功能：
+     1. 在运行时，判断任意一个对象所属的类。
+     2. 在运行时，构造任意一个类的对象。
+     3. 在运行时，判断任意一个类所具有的成员变量方法。
+     4. 在运行时，调用任意一个对象的方法。
+     
+     
+  jdk中，主要由以下类来实现Java的反射机制，这些类都位于java.lang.reflect包中
+    -- Class类：代表一个类
+    -- Field类：代表类的成员变量(成员变量也称为类的属性)
+    -- Method类： 代表类的方法
+    -- Constructor类：代表类的构造方法
+    -- Array类：提供了动态创建数组，以及访问数组的元素的静态方法 
+    
+     
+     
+
+  动态语言：  程序在运行时，允许改变 “程序结构” 或  “变量类型” 的语言。
+         
+         Perl ，Python ， Ruby ，javaScript 是动态语言。
+         
+         c++ ，java ，c#  是静态语言。 
+    
+     
+     
+java中：无论生成某个类的多少个对象，这些对象都会对应于同一个Class对象。
+     
+     
+   >X< 获取类唯一的class对象的方法
+        
+        /*
+         * 第一种方法
+         */
+         Class<?> classType = Class.forName("com.extend.generic.Child");
+         
+        /*
+		 * 第二种方法： InvokeTester.class 这样就会获取这个类对象,在生成类的实例
+		 */
+		Class<?> classType = InvokeTester.class;
+        Object obj = classType.newInstance();
+        
+        /*
+         * 第三种方法： getClass()方法获取。
+         * 获取当前实例所对应的类对象
+         */
+       InvokeTester it = new InvokeTester();
+		it.getClass();
+        
+    ---1. 要想使用反射，首先需要获取 待处理类 或 对象所对应的Class对象。
+     
+     

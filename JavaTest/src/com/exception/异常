@@ -1,0 +1,72 @@
+
+  Exception(异常)
+
+  java中所有的异常都 直接的 或 间接的 继承 Exception
+
+  Java异常分为两大类
+     -- a). Checked exception (非 Runtime Exception)
+                               检查的异常  (非运行时异常)
+     -- b). Unchecked exception  (Runtime Exception)
+                               非检查的异常 (运行时异常)
+     
+     1. RuntimeException  运行时异常
+       
+        -- a). 直接 extends Exception类， 叫运行异常，
+        	  java中所有的  运行时异常都会 直接 或 间接的  继承  RuntimeException。
+        	  
+        -- b). 
+        
+        
+        
+     2. Java 中 凡是直接或间接继承自 Exception类，而不是继承自RuntimeException的类都是非运行时异常。 
+         
+      
+      
+     3. 针对两种异常的处理策略
+      
+         -- a).  对于非运行时异常(check exception),必须要对其进行处理，
+                                          处理有两种方式：第一种是  使用 try...catch...finally...进行捕获；
+                                                                        第二种是  在调用该会产生异常的方法 所在的方法声明throws Exception
+         
+         -- b).  对于运行时异常(runtime exception),我们可以不对其进行处理，也可以对其进行处理，
+                                           推荐不对其进行处理。
+                                           
+     异常应用：
+     try{
+           //可能会出现异常的代码块
+           
+           //如果代码出现异常，代码块会自动生成一个动态的相对应异常对象
+		}
+		catch(ArithmeticException e){
+		}
+		finally{//无论 发生异常，还是没有 发生异常 finally永远都会执行
+		}
+     
+     
+     
+     
+   常见的程序异常：
+     
+     --a).  NullPointException 是空指针异常，出现该异常的原因在于某个引用为 null，
+     	         但你却调用了它的某个方法。这是就会出现异常。
+     
+     
+     
+     
+     
+           如果try块中存在return语句，那么首先也需要将finally块中的代码执行完毕，然后方法再返回
+           
+           
+          如果try块中存在System.exit(0)语句，那么就不会执行finally块中的代码，因为System.exit(0)
+          会终止当前运行的java虚拟机，程序会在虚拟机终止前结束执行。
+          
+     
+     
+     
+     
+     
+     
+     
+     
+
+

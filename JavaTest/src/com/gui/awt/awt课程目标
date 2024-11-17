@@ -1,0 +1,14 @@
+
+
+
+   --描述AWT包及其组件
+   --定义Container、Component 及Layout Manager等术语，以及它们是如何在一起来建立GUI的
+   
+   -- 使用Layout Manager
+   -- 使用Flow、Border、Gird及  Card 布局管理器来获得期望的动态布局
+   
+   -- 增加组件到Container
+   
+   -- 正确运用Frame 及Panel容器
+   
+   -- 描述如何使用嵌套容器来完成复杂的布局

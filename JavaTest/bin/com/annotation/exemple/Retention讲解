@@ -1,0 +1,48 @@
+
+告知编译程序如何处理@Retention
+
+
+	1.  java.lang.annotation.Retation型态(注解类型)可以在你定义Annotation型态时，
+		指示编译程序如何对待你的自定义的Annotation型态。
+		
+		缺省上编译程序会将Annotation信息留在.class档案中，但不被虚拟机读取，而仅用于
+		编译程序或工具程序运行时提供信息。
+		
+		
+	2.	在使用Retention型态时，需要提供
+	     java.lang.annotation.RetentionPolicy 的枚举型态 
+	     
+	     package java.lang.annotation;
+	     
+	     public enum RetentionPolicy{
+	         
+	         SOURCE,  // 编译程序处理完Annotation信息后，就完成任务
+	         CLASS,   // 编译程序将Annotation储存在class文件中，缺省
+	         RUNTIME; // 编译程序将Annotation 储存在class文件中，可有VM读入
+	     }
+		
+		
+
+
+       RetentionPolicy 为source的例子是 @SuppressWarnings 
+                 仅在编译时期，告知编译程序来抑制警告，所以不必将这个信息存储于.class档案
+                 RetentionPolicy为Runtime的时机，可以像是，
+                 你使用java设计一个程序代码分析工具，
+                 你必须让VM能读出Annocation信息，以便在分析程序使用。
+                 
+                  搭配反射(reflection)机制，就可以达到这个目的
+
+
+
+	        定义Annotation(注解)时，必须设定RetationPolicy为RunTime，也就是可以
+	        在JVM中读取Annotation信息。
+
+
+
+
+
+
+
+
+
+

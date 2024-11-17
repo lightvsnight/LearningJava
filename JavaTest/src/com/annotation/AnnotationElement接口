@@ -1,0 +1,19 @@
+
+java.lang.reflect.AnnotationElement 接口
+
+                  方法： public Annotation getAnnotation(Class annotationType);
+            
+            public Annotation[] getAnnotations();
+            
+            
+            public Annotation[] getDeclaredAnnotations();  //Declared(译:已声明的  ; adj. 公然的；公开宣布的)
+            
+            public boolean isAnnotationPresent(Class annotationType);
+            
+            
+           >|<  Class Constructor Filed Method Package 等类别，
+                                        都实现了AnnotatedElement接口
+                                        
+                                        
+                                        
+                                        

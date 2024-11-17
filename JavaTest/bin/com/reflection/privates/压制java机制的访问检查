@@ -1,0 +1,12 @@
+ 
+ ---通过反射，访问类中private所修饰的成员
+ 	
+ 	--1.访问private所修饰的 变量：
+	
+	
+	
+	
+	
+	--2.访问private所修饰的 方法：
+	    method.isAccessible(boolean flag);
+	  	通过此方法，在设置当前访问类的权限

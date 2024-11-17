@@ -1,0 +1,42 @@
+java  注解(annotation)
+
+       1. @Override 注解：表示子类重写(override)父类的对应的方法。
+       
+       2. @Deprecated 注解：表示该方法是不建议被使用的。
+       
+       3. @SuppressWarning注解：表示抑制警告 
+       
+       
+            自定义注解： 当自定义注解中的属性名称为value时，在对其赋值时可以不指定属性名称，直接写上属性值即可；
+       	         除了value以外的其它属性名称，都必须使用name= value 这种赋值方式，即明确指定给谁赋值。
+       	         
+     
+     >|< : 当我们使用@interface 关键字定义一个注解时，该注解隐含的继承了java.lang.annotation.Annotation接口
+                           如果我们定义了一个接口，并让该接口继承自Annotation，那么我们所定义的接口依然还是接口而不是注解。
+                           
+           @interface  AnnotationTest{
+                // 这是注解，AnnotationTest隐含的继承了Annotation
+           }   
+           
+           interface  AnnotationTest extends Annotation{
+                //  这是接口，这不是注解
+           }
+       	         
+       
+            使用@interface自定定义Annotation型态时，实际上是自动继承了java.lang.annotation.Annotation接口
+            由编译程序自动为您完成其它产生的细节，在定义Annotation型态时，不能继承其它的Annotation型态或是接口。
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                      

@@ -1,0 +1,8 @@
+  --1.For-each循环
+           a. for-each循环 加入简化了集合的遍历
+           	    语法：
+           	     for(Type element:array){
+           	       ...
+           	     }
+           	  实例：ForTest.java
+           	  

@@ -1,0 +1,49 @@
+java.io 包中  InputStream的类层次
+
+                     
+                     
+                    		字节流  / 节点流                                                                                                                  过滤流                                         
+                   -------------> FileInputStream
+                  |                                                    -----------> DataInputStream
+                  |                                                   |
+                  |-------------> ByteArrayInputStream                |
+                  |                                                   |-----------> BufferedInputStream  缓冲流：具备缓冲的功能
+                  |										衍生出来的过滤流     |
+                  |-------------> FilterInputStream   --------------->|
+InputStream  ---->|                                                   |-----------> LineNumberInputStream
+                  |                                                   |
+                  |-------------> ObjectInputStream                   |
+                  |                                                    -----------> PushbackInputStream
+                  |
+                  |-------------> PipedInputStream
+                  |
+                  |
+                  |-------------> SequenceInputStream
+                  |
+                  |
+                   -------------> StringBufferInputStream
+                   
+  过滤流可以包装 节点流：
+ DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream("g:\\javaTest\\hello.txt")));
+ 
+  
+  
+  
+  
+  
+              			字节流	节点流                                                                                                                  过滤流                                         
+                   -------------> FileOutputStream
+                  |                                                    -----------> DataOutputStream
+                  |                                                   |
+                  |-------------> ByteArrayOutputStream               |
+                  |                                                   |-----------> BufferedOutputStream  缓冲流：具备缓冲的功能
+                  |										衍生出来的过滤流     |
+                  |-------------> FilterOutputStrea   --------------->|
+OutputStream ---->|                                                    -----------> PrintStream
+                  |                                                   
+                  |-------------> ObjectOutputStream                  
+                  |                                                    
+                  |
+                  |
+                   -------------> PipedOutputStream
+                 

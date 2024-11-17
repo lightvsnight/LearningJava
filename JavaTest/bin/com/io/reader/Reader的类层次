@@ -1,0 +1,54 @@
+java.io 包中  Reader的类层次
+
+                 
+ Java 程序语言使用Unicode来表示字符串和字符，Unicode 使用两个字节来表示一个字符，即一个字符占16位
+                     
+                    		字符流  / 字符节点流                                                                                          过滤流                 
+                    		                          	                      
+                   -------------> BufferedWriter      
+                  |                                                    
+                  |                                                   
+                  |-------------> CharArrayWriter                      
+                  |                                                     
+                  |										  
+                  |-------------> FilterWriter        
+Writer  --------->|                                    
+                  |                                          衍生出来的过滤流             
+                  |-------------> OutputStreamWriter   --------------------> FileWriter 
+                  |                                                   
+                  |
+                  |-------------> PipedWriter
+                  |
+                  |
+                  |-------------> StringWriter
+                  
+                  
+                  
+                  
+                  
+                  
+ 
+ 
+ 
+                		字符流  / 字符节点流                                                                                          过滤流                 
+                    		                          	 衍生出来的过滤流                        
+                   -------------> BufferedReader      --------------------------->  LineNumberReader
+                  |                                                    
+                  |                                                   
+                  |-------------> CharArrayReader                      
+                  |                                                     ----------> PushbackReader
+                  |										衍生出来的过滤流     |
+                  |-------------> FilterReader        --------------->|
+Reader  --------->|                                                   |
+                  |                                                     ----------> FileReader
+                  |-------------> InputStreamReader                   
+                  |                                                   
+                  |
+                  |-------------> PipedReader
+                  |
+                  |
+                   -------------> StringReader
+                  
+                  
+                  
+                  

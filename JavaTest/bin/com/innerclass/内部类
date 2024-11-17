@@ -1,0 +1,50 @@
+  --内部类
+  
+  --1. 静态内部类: (Inner Class)
+  
+  				只能访问 外部类的  静态成员变量与静态方法，生成静态内部类对象的方式为：
+                  
+                OuterClass.InnerClass inner  = new OuterClass.InnerClass();
+                                        外部类.内部类     引用  = new 外部类.内部类();
+                                        
+                class文件格式： OutClass&InnerClass.class
+                
+  --2. 成员内部类：(member inner class)
+  
+  		--a). 可以访问外部类的静态与非静态的方法与成员变量。生成成员内部类对象的方式为：
+  		        OutClass.innerClass = new OutClass().new InnerClass();
+        
+        --b). 若想在成员内部类中访问 外部类的成员变量，语法为：OutClass.this.a;
+        
+  --3. 局部内部类：(local inner class)
+  
+  		 --a).局部内部类是被定义在方法当中，只能访问方法中声明的final类型的变量。
+             
+  --4. 匿名内部类：()
+                            特性： 局部内部类，但是它没有名字
+                                        没有关键字class
+                                        没有关键字extends 和 implement
+                                        没有构造方法
+     (重要的特性) #隐含的继承了一个父类(superClass)或者 实现了一个借口
+          new　FilenameFilter(){
+            @Override
+			public boolean accept(File dir, String name) {
+				return false;
+			}
+          }
+          
+         * 这个FilenameFilter之后{} 代表了匿名内部类，
+                           这个匿名内部类 实现了public interface FilenameFilter{}
+                                        
+          new Date(){
+			@Override
+			public String toLocaleString(){
+				return "hello world";
+			}
+		  }      
+		  
+		 * 这个Date()之后的{}代表了匿名内部类，
+		        这个匿名内部类 继承了public class Date{}                      
+                                        
+            
+  		

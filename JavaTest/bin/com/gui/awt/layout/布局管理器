@@ -1,0 +1,24 @@
+
+
+ -- 布局管理器
+    
+     --AWT中 提供了五种布局管理器
+     
+        BorderLayout
+        FlowLayout
+        GridLayout
+        CardLayout
+        GridBagLayout
+
+
+
+
+
+
+
+
+
+
+
+
+
